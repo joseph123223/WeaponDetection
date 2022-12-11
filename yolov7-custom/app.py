@@ -38,17 +38,7 @@ def home():
 
 @app.route('/', methods=['POST'])
 def upload_image():
-    if 'file' not in request.files:
-        flash('No file part')
-
-        return redirect(request.url)
-
     file = request.files['file']
-
-    if file.filename == '':
-        flash('No image selected for uploading')
-
-        return redirect(request.url)
 
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
@@ -57,11 +47,11 @@ def upload_image():
         if filename[-3:] == 'mp4':
             flash('Video successfully uploaded')
         else:
-            flash('Image successfully uploaded and displayed below')
+            flash('Image successfully uploaded')
 
         return render_template('index.html', filename=filename)
     else:
-        flash('Allowed image types are - png, jpg, jpeg, gif, mp4')
+        flash('Only allow types - png, jpg, jpeg, gif, mp4')
 
         return redirect(request.url)
 
@@ -251,7 +241,6 @@ def display_image(filename):
 
 @app.route('/download')
 def download_file():
-    p = "output/t1.jpeg"
     p1 = "output/" + name
     return send_file(p1,as_attachment=True)
 
