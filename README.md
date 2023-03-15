@@ -4,9 +4,6 @@
 #### This repo didn't include the custom dataset due to the size of the files. Please go to the google share folder to view the custom dataset if needed.
 [https://drive.google.com/file/d/1I6KtGfSDYAYjf91UtLWL8gIS_stajgcd/view?usp=sharing](https://drive.google.com/file/d/1I6KtGfSDYAYjf91UtLWL8gIS_stajgcd/view?usp=sharing)
 
-## Demo Video
-[https://www.youtube.com/watch?v=3IsdND7GT6M&ab_channel=Joseph](https://www.youtube.com/watch?v=3IsdND7GT6M&ab_channel=Joseph)
-
 ## Introduction
 
 **Python version**: 3.9
